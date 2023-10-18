@@ -11,7 +11,26 @@
             {
                 string mm = "Millimetres";
                 Console.WriteLine($"You've chosen {mm}.\nPlease select the unit that you would like to convert {mm} to:");
-                Console.ReadLine();
+
+                string? secondUnit = Console.ReadLine();
+                if (secondUnit == "cm")
+                {
+                    Console.WriteLine("Write measurement in Millimetres:");
+                    decimal num1 = Convert.ToInt32(Console.ReadLine());
+
+                    decimal sumConverted = num1 / 10;
+
+                    Console.WriteLine($"{num1} millimetres is equal to {sumConverted} centimetres");
+                }
+                else if (secondUnit == "m")
+                {
+                    Console.WriteLine("Write measurement in Millimetres:");
+                    decimal num1 = Convert.ToInt32(Console.ReadLine());
+
+                    decimal sumConverted = num1 / 1000;
+
+                    Console.WriteLine($"{num1} millimetres is equal to {sumConverted} metres");
+                }
             }
             else if (firstUnit == "cm")
             {
@@ -43,10 +62,13 @@
                 Console.WriteLine("Sorry, unit not recognized. Please type in a unit from the list");
             }
 
-            string? secondUnit = Console.ReadLine();
+           /* string? secondUnit = Console.ReadLine();
             
             if (firstUnit == "mm" && secondUnit == "cm")
-
+            {
+                Console.WriteLine("You're converting Millimetres to Centimetres");
+            }
+           */
                 
         }
     }
