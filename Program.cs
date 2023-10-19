@@ -1,4 +1,4 @@
-﻿namespace UnitConventer
+﻿namespace UnitConverter
 {
     class Program
     {
@@ -61,6 +61,51 @@
             {
                 string cm = "Centimetres";
                 Console.WriteLine($"You've chosen {cm}.\nPlease select the unit that you would like to convert {cm} to:");
+
+                string? secondUnit = Console.ReadLine();
+
+                Console.WriteLine("Write measurement in Centimetres:");
+
+                if (secondUnit == "mm")
+                {
+                    decimal num1 = Convert.ToDecimal(Console.ReadLine());
+
+                    decimal sumConverted = num1 * 10;
+
+                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} millimetres");
+                }
+                else if (secondUnit == "m")
+                {
+                    decimal num1 = Convert.ToDecimal(Console.ReadLine());
+
+                    decimal sumConverted = num1 / 100;
+
+                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} metres");
+                }
+                else if (secondUnit == "km")
+                {
+                    decimal num1 = Convert.ToDecimal(Console.ReadLine());
+
+                    decimal sumConverted = num1 / 10000;
+
+                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} kilometres");
+                }
+                else if (secondUnit == "yrd")
+                {
+                    decimal num1 = Convert.ToDecimal(Console.ReadLine());
+
+                    decimal sumConverted = num1 / 914.4m;
+
+                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} yards");
+                }
+                else if (secondUnit == "mi")
+                {
+                    decimal num1 = Convert.ToDecimal(Console.ReadLine());
+
+                    decimal sumConverted = num1 / 1609350;
+
+                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} miles");
+                }
             }
             else if (firstUnit == "m")
             {
@@ -85,16 +130,7 @@
             else
             {
                 Console.WriteLine("Sorry, unit not recognized. Please type in a unit from the list");
-            }
-
-           /* string? secondUnit = Console.ReadLine();
-            
-            if (firstUnit == "mm" && secondUnit == "cm")
-            {
-                Console.WriteLine("You're converting Millimetres to Centimetres");
-            }
-           */
-                
+            }                
         }
     }
 }
