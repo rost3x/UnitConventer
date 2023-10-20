@@ -105,12 +105,12 @@
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 / 160935;
+                    decimal sumConverted = num1 / 160900;
 
                     Console.WriteLine($"{num1} centimetres is equal to {sumConverted} miles");
                 }
             }
-
+            //Converting from Metres to other units
             else if (firstUnit == "m")
             {
                 string m = "Metres";
@@ -148,7 +148,7 @@
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 / 1.0936132983m;
+                    decimal sumConverted = num1 * 1.094m;
 
                     Console.WriteLine($"{num1} metres is equal to {sumConverted} yards");
                 }
@@ -156,12 +156,13 @@
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 / 0.0006213689m;
+                    decimal sumConverted = num1 / 1609m;
 
                     Console.WriteLine($"{num1} metres is equal to {sumConverted} miles");
                 }
             }
 
+            // Converting from Kilometres to other units
             else if (firstUnit == "km")
             {
                 string km = "Kilometres";
@@ -213,6 +214,7 @@
                 }
             }
 
+            // Converting from Yards to other units
             else if (firstUnit == "yrd")
             {
                 string yrds = "Yards";
@@ -264,6 +266,7 @@
                 }
             }
 
+            // Converting from Miles to other units
             else if (firstUnit == "mi")
             {
                 string mi = "Miles";
@@ -271,47 +274,47 @@
 
                 string? secondUnit = Console.ReadLine();
 
-                Console.WriteLine("Write measurement in Metres:");
+                Console.WriteLine("Write measurement in Miles:");
 
                 if (secondUnit == "mm")
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 * 1000;
+                    decimal sumConverted = num1 * 1.609000000m;
 
-                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} millimetres");
+                    Console.WriteLine($"{num1} miles is equal to {sumConverted} millimetres");
                 }
                 else if (secondUnit == "cm")
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 * 100;
+                    decimal sumConverted = num1 * 160900;
 
-                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} metres");
+                    Console.WriteLine($"{num1} miles is equal to {sumConverted} centimetres");
                 }
                 else if (secondUnit == "m")
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 / 1000;
+                    decimal sumConverted = num1 * 1609;
 
-                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} kilometres");
+                    Console.WriteLine($"{num1} miles is equal to {sumConverted} metres");
                 }
                 else if (secondUnit == "km")
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 / 1.0936132983m;
+                    decimal sumConverted = num1 * 1.60934m;
 
-                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} yards");
+                    Console.WriteLine($"{num1} miles is equal to {sumConverted} km");
                 }
                 else if (secondUnit == "yrd")
                 {
                     decimal num1 = Convert.ToDecimal(Console.ReadLine());
 
-                    decimal sumConverted = num1 / 0.0006213689m;
+                    decimal sumConverted = num1 * 1760;
 
-                    Console.WriteLine($"{num1} centimetres is equal to {sumConverted} miles");
+                    Console.WriteLine($"{num1} miles is equal to {sumConverted} yards");
                 }
             }
             else
